@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+import random
+import os
+
 import pyfiglet
 import colorama as c
 
@@ -11,10 +14,13 @@ COLORS = [
     c.Fore.BLACK,
 ]
 f = pyfiglet.Figlet()
+
 try:
     while True:
         for color in COLORS:
             _ = input()
+            os.system("clear") 
+            f.setFont(font = random.choice(f.getFonts()))
             print(color + f.renderText(text))
 except KeyboardInterrupt:
     pass
