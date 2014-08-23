@@ -36,8 +36,11 @@ COLORS = [
 ]
 
 def item():
-    item_string = random.choice(ITEMS)
-    split = item_string.split()
+    if random.choice([True,True,False]):
+        item_string = random.choice(ITEMS)
+        split = item_string.split()
+    else:
+        split = ['pirateship', '< 3', 'Market', 'Basket']
     if len(split) == 2:
         word = [split[0], split[0], split[1], split[1]]
         colors = [COLORS[0], COLORS[0], COLORS[1], COLORS[1]]
