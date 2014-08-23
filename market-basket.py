@@ -36,7 +36,7 @@ COLORS = [
 ]
 
 def item():
-    if random.choice([True,True,False]):
+    if random.randint(0,7) > 0:
         item_string = random.choice(ITEMS)
         split = item_string.split()
     else:
@@ -56,15 +56,19 @@ def item():
 
 f = pyfiglet.Figlet()
 
+words = None
+prevwords = None
 try:
     while True:
+        prevwords = words
         words = item()
-        if words == None:
+        if words == None or prevwords == words:
             continue
         f.setFont(font = random.choice(f.getFonts()))
         for color, word in words:
             _ = input()
             os.system("clear") 
+            print(6 * '\n')
             print(color + f.renderText(word))
 except KeyboardInterrupt:
     pass
