@@ -38,6 +38,7 @@ COLORS = [
 def item():
     if random.choice([True,True,False]):
         item_string = random.choice(ITEMS)
+        item_string = 'Golden Ripe Pineapples'
         split = item_string.split()
     else:
         split = ['pirateship', '< 3', 'Market', 'Basket']
@@ -46,7 +47,7 @@ def item():
         colors = [COLORS[0], COLORS[0], COLORS[1], COLORS[1]]
     elif len(split) == 3:
         word = split + [split[2]]
-        colors = COLORS + [COLORS[2]]
+        colors = [COLORS[0], COLORS[1], COLORS[2], COLORS[2]]
     elif len(split) == 4:
         word = split
         colors = COLORS
