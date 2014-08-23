@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import random
 import os
 
@@ -54,21 +53,22 @@ def item():
         return None
     return zip(colors, word)
 
-f = pyfiglet.Figlet()
+def main():
+    f = pyfiglet.Figlet()
 
-words = None
-prevwords = None
-try:
-    while True:
-        prevwords = words
-        words = item()
-        if words == None or prevwords == words:
-            continue
-        f.setFont(font = random.choice(f.getFonts()))
-        for color, word in words:
-            _ = input()
-            os.system("clear") 
-            print(6 * '\n')
-            print(color + f.renderText(word))
-except KeyboardInterrupt:
-    pass
+    words = None
+    prevwords = None
+    try:
+        while True:
+            prevwords = words
+            words = item()
+            if words == None or prevwords == words:
+                continue
+            f.setFont(font = random.choice(f.getFonts()))
+            for color, word in words:
+                _ = input()
+                os.system("clear") 
+                print(6 * '\n')
+                print(color + f.renderText(word))
+    except KeyboardInterrupt:
+        pass
