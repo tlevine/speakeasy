@@ -10,10 +10,11 @@ COLORS = [
     c.Fore.MAGENTA,
     c.Fore.BLACK,
 ]
+f = pyfiglet.Figlet()
 try:
     while True:
         for color in COLORS:
             _ = input()
-            print(color + text)
+            print(color + f.renderText(text))
 except KeyboardInterrupt:
     pass
