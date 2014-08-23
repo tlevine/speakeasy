@@ -38,7 +38,6 @@ COLORS = [
 def item():
     if random.choice([True,True,False]):
         item_string = random.choice(ITEMS)
-        item_string = 'Golden Ripe Pineapples'
         split = item_string.split()
     else:
         split = ['pirateship', '< 3', 'Market', 'Basket']
