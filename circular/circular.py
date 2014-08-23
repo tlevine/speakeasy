@@ -59,6 +59,8 @@ def main():
     words = None
     prevwords = None
     try:
+        os.system("clear") 
+        print('Press enter to advance the pretty words.')
         while True:
             prevwords = words
             words = item()
