@@ -8,10 +8,10 @@ import colorama as c
 text = 'Pirate ship'
 
 COLORS = [
+    c.Fore.WHITE,
     c.Fore.CYAN,
     c.Fore.YELLOW,
     c.Fore.MAGENTA,
-    c.Fore.BLACK,
 ]
 f = pyfiglet.Figlet()
 
