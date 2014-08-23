@@ -5,7 +5,8 @@ import os
 import pyfiglet
 import colorama as c
 
-text = 'Pirate ship'
+texts = [
+]
 
 COLORS = [
     c.Fore.WHITE,
@@ -21,6 +22,6 @@ try:
             _ = input()
             os.system("clear") 
             f.setFont(font = random.choice(f.getFonts()))
-            print(color + f.renderText(text))
+            print(color + f.renderText(random.choice(texts)))
 except KeyboardInterrupt:
     pass
